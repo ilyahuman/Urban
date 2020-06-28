@@ -1,0 +1,43 @@
+.menu-toggle-button {
+    width: 30px;
+    height: 20px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    z-index: 20;
+}
+
+.menu-toggle-button .line {
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-black-lighter);
+    display: block;
+    margin: 3px auto;
+    transition: transform .3s ease-in-out;
+}
+
+.menu-toggle-button:hover {
+    cursor: pointer;
+}
+
+.menu-toggle-button:focus,
+.menu-toggle-button:active {
+    border: none;
+    outline: none;
+}
+
+.menu-toggle-button.active .line {
+    background-color: var(--color-white);
+}
+
+.menu-toggle-button.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle-button.active .line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle-button.active .line:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
+}

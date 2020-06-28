@@ -1,0 +1,45 @@
+.app-main {
+    padding: 100px 0 284px;
+}
+
+.app-main__info {
+    margin-bottom: 90px;
+    display: flex;
+    align-items: center;
+}
+
+
+.app-main__info-title,
+.app-main__info-text {
+    width: 50%;
+}
+
+.app-main__cards {
+    position: relative;
+    margin: 0 -20px;
+}
+
+.app-main__cards:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-blue-lighter);
+    width: var(--circle-bg-width);
+    height: var(--circle-bg-height);
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .app-main__info {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .app-main__info-title,
+    .app-main__info-text {
+        width: 100%;
+    }
+}
